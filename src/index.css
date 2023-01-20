@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #222;
+  color: white;
+  text-align: center;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* style the cards */
+
+/* holder */
+
+.holder {
+  position: relative;
+}
+
+/* front one */
+.front {
+  transform: rotateY(90deg);
+  transition: 0.2s;
+  transition-delay: 0.2s;
+}
+.holder.flipped .front {
+  transform: rotateY(0deg);
+}
+
+/* back one */
+.cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.2s;
+  transition-delay: 0.2s;
+}
+.holder.flipped .cover {
+  transform: rotateY(90deg);
+  transition-delay: 0s;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
